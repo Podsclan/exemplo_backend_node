@@ -8,6 +8,20 @@
 Retorna os produtos cadastrados
 
 ----------------
+
+**GET: /api/produtos/baratos**
+
+Remove todos os produto baratos
+
+----------------
+**GET: /api/produtos/baratos**
+
+Retorna o produto dado seu ID
+
+ Requer:
+  -  "id" - id do produto cadastrado.
+
+----------------
 **POST: /api/produtos**
 
 Cadastra um novo produto de acordo com as informações passadas.
