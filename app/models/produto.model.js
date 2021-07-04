@@ -1,11 +1,11 @@
-module.exports = mongoose => {
+module.exports = (mongoose) => {
   const Produto = mongoose.model(
     "produto",
     mongoose.Schema(
       {
         titulo: String,
         descricao: String,
-        preco: Number
+        preco: Number,
       },
       { timestamps: true }
     )

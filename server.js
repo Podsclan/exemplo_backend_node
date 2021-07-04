@@ -7,7 +7,7 @@ const app = express();
 
 // Seta as configurações do CORS. No caso, especifica que apenas conexões de tal endereço serão aceitas. Ver: // https://expressjs.com/en/resources/middleware/cors.html
 var corsOptions = {
-  origin: "http://localhost:4200"
+  origin: "*",
 };
 
 // Ativa a configuração CORS
@@ -28,12 +28,12 @@ const db = require("./app/models");
 db.mongoose
   .connect(db.url, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   })
   .then(() => {
     console.log("Conectado ao banco de dados");
   })
-  .catch(err => {
+  .catch((err) => {
     console.log("Não foi possível conectar ao banco de dados", err);
     process.exit();
   });
